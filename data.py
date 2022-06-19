@@ -210,10 +210,6 @@ def write_processed_dataset(input_files, output_file):
 
     with open(output_file, "wb") as f:
         pickle.dump(data, f, pickle.HIGHEST_PROTOCOL)
-    
-    with open(output_file + ".txt" , "w") as f:
-        for entry in data:
-          f.write(str(entry) + '\n')
 
 
 def create_dev_test_train_split_and_vocabulary(
